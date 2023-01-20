@@ -1,0 +1,11 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "A team profile generator for a tech company",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Breakfireaus",
+  "license": "MIT"
+}
