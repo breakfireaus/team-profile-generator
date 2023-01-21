@@ -120,13 +120,13 @@ function addHtmlforEmployee(member) {
     const role = member.getRole()
     const id = member.getId()
     const email = member.getEmployeeEmail()
-    const officePhoneNumber = member.officePhoneNumber()
+    const getOfficeNumber = member.getOfficeNumber()
     let data = ''
     if (role === 'Engineer') {
       const gitHub = member.getTheGithub()
       data = `<div class="col-4">
                 <div class="card mx-auto mb-4 shadow" style="width: 19rem">
-                  <h5 class="card-header">${member.Employeename}<br /><br /><i class="fas fa-glasses"></i> Engineer</h5>
+                  <h5 class="card-header">${member.name}<br /><br /><i class="fas fa-glasses"></i> Engineer</h5>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">ID: ${id}</li>
                       <li class="list-group-item">Email:<a href="mailto:${member.employeeEmail}" target="_blank"> ${member.EmployeeEmail}</a></li>
@@ -147,14 +147,14 @@ function addHtmlforEmployee(member) {
                 </div>
               </div>`
     } else {
-      const officeNumber = member.officePhoneNumber()
+      const officeNumber = member.getOfficeNumber()
       data = `<div class="col-4">
                 <div class="card mx-auto mb-3 shadow" style="width: 18rem">
                   <h5 class="card-header">${member.name}<br /><br /><i class="fas fa-mug-hot"></i> Manager</h5>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">ID: ${id}</li>
                       <li class="list-group-item">Email:<a href="mailto:${member.email}" target="_blank"> ${member.email}</a></li>
-                      <li class="list-group-item">Office Number: ${member.officePhoneNumber}</li>
+                      <li class="list-group-item">Office Number: ${member.getOfficeNumber}</li>
                     </ul>
                 </div>
               </div>`
