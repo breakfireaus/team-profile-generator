@@ -1,9 +1,9 @@
 const Intern = require('../lib/Intern')
 
 test('Set school from constructor', () => {
-  const testtheSchool = 'MelbourneUni'
-  const employee = new Intern('Donald', 3, 'donald@email.com', testtheSchool)
-  expect(employee.school).toBe(testtheSchool)
+  const testTheSchool = 'MelbourneUni'
+  const employee = new Intern('Donald', 3, 'donald@email.com', testTheSchool)
+  expect(employee.school).toBe(testTheSchool)
 })
 
 test('getRole() returns Intern', () => {

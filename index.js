@@ -68,11 +68,11 @@ function addTeamMember() {
         .then(function ({ roleInfo, moreTeamMembers }) {
           let newMember
           if (role === 'Engineer') {
-            newMember = new Engineer(name, id, employeeEmail, roleInfo)
+            newMember = new Engineer(name, id, email, roleInfo)
           } else if (role === 'Intern') {
-            newMember = new Intern(employeeName, id, employeeEmail, roleInfo)
+            newMember = new Intern(name, id, email, roleInfo)
           } else {
-            newMember = new Manager(employeeName, id, employeeEmail, roleInfo)
+            newMember = new Manager(name, id, email, roleInfo)
           }
           employees.push(newMember)
           addHtmlforEmployee(newMember).then(function () {
@@ -120,6 +120,7 @@ function addHtmlforEmployee(member) {
     const role = member.getRole()
     const id = member.getId()
     const email = member.getEmployeeEmail()
+    const officePhoneNumber = member.officePhoneNumber()
     let data = ''
     if (role === 'Engineer') {
       const gitHub = member.getTheGithub()
@@ -140,19 +141,19 @@ function addHtmlforEmployee(member) {
                   <h5 class="card-header">${member.name}<br /><br /><i class="fas fa-user-graduate"></i> Intern</h5>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">ID: ${id}</li>
-                      <li class="list-group-item">Email:<a href="mailto:${member.employeeEmail}" target="_blank"> ${member.employeeEmailmail}</a></li>
+                      <li class="list-group-item">Email:<a href="mailto:${member.email}" target="_blank"> ${member.email}</a></li>
                       <li class="list-group-item">School: ${member.school}</li>
                     </ul>
                 </div>
               </div>`
     } else {
-      const officeNumber = member.getOfficePhoneNumber()
+      const officeNumber = member.officePhoneNumber()
       data = `<div class="col-4">
                 <div class="card mx-auto mb-3 shadow" style="width: 18rem">
                   <h5 class="card-header">${member.name}<br /><br /><i class="fas fa-mug-hot"></i> Manager</h5>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">ID: ${id}</li>
-                      <li class="list-group-item">Email:<a href="mailto:${member.EmployeeEmail}" target="_blank"> ${member.EmployeeEmail}</a></li>
+                      <li class="list-group-item">Email:<a href="mailto:${member.email}" target="_blank"> ${member.email}</a></li>
                       <li class="list-group-item">Office Number: ${member.officePhoneNumber}</li>
                     </ul>
                 </div>
