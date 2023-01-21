@@ -70,9 +70,9 @@ function addTeamMember() {
           if (role === 'Engineer') {
             newMember = new Engineer(name, id, email, roleInfo)
           } else if (role === 'Intern') {
-            newMember = new Intern(employeename, id, email, roleInfo)
+            newMember = new Intern(Employeename, id, email, roleInfo)
           } else {
-            newMember = new Manager(employeename, id, email, roleInfo)
+            newMember = new Manager(Employeename, id, email, roleInfo)
           }
           employees.push(newMember)
           addHtmlforEmployee(newMember).then(function () {
@@ -125,10 +125,10 @@ function addHtmlforEmployee(member) {
       const gitHub = member.getTheGithub()
       data = `<div class="col-4">
                 <div class="card mx-auto mb-4 shadow" style="width: 19rem">
-                  <h5 class="card-header">${employeename}<br /><br /><i class="fas fa-glasses"></i> Engineer</h5>
+                  <h5 class="card-header">${member.Employeename}<br /><br /><i class="fas fa-glasses"></i> Engineer</h5>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">ID: ${id}</li>
-                      <li class="list-group-item">Email:<a href="mailto:${employeeEmail}" target="_blank"> ${EmployeeEmail}</a></li>
+                      <li class="list-group-item">Email:<a href="mailto:${member.employeeEmail}" target="_blank"> ${member.EmployeeEmail}</a></li>
                       <li class="list-group-item">GitHub:<a href="https://github.com/${gitHub}" target="_blank"> ${gitHub}</a></li>
                     </ul>
                 </div>
@@ -137,11 +137,11 @@ function addHtmlforEmployee(member) {
       const school = member.getTheSchool()
       data = `<div class="col-4">
                 <div class="card mx-auto mb-4 shadow" style="width: 18rem">
-                  <h5 class="card-header">${name}<br /><br /><i class="fas fa-user-graduate"></i> Intern</h5>
+                  <h5 class="card-header">${member.name}<br /><br /><i class="fas fa-user-graduate"></i> Intern</h5>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">ID: ${id}</li>
-                      <li class="list-group-item">Email:<a href="mailto:${employeeEmail}" target="_blank"> ${employeeEmailmail}</a></li>
-                      <li class="list-group-item">School: ${school}</li>
+                      <li class="list-group-item">Email:<a href="mailto:${member.employeeEmail}" target="_blank"> ${member.employeeEmailmail}</a></li>
+                      <li class="list-group-item">School: ${member.school}</li>
                     </ul>
                 </div>
               </div>`
@@ -149,11 +149,11 @@ function addHtmlforEmployee(member) {
       const officeNumber = member.getOfficePhoneNumber()
       data = `<div class="col-4">
                 <div class="card mx-auto mb-3 shadow" style="width: 18rem">
-                  <h5 class="card-header">${name}<br /><br /><i class="fas fa-mug-hot"></i> Manager</h5>
+                  <h5 class="card-header">${member.name}<br /><br /><i class="fas fa-mug-hot"></i> Manager</h5>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">ID: ${id}</li>
-                      <li class="list-group-item">Email:<a href="mailto:${EmployeeEmail}" target="_blank"> ${EmployeeEmail}</a></li>
-                      <li class="list-group-item">Office Number: ${officePhoneNumber}</li>
+                      <li class="list-group-item">Email:<a href="mailto:${member.EmployeeEmail}" target="_blank"> ${member.EmployeeEmail}</a></li>
+                      <li class="list-group-item">Office Number: ${member.officePhoneNumber}</li>
                     </ul>
                 </div>
               </div>`
