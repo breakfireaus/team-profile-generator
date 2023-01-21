@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+  }
+  .navbar {
+    background-color: #034861;
+  }
+  .navbar-brand {
+    font-size: 28px;
+  }
+  
+  body {
+    background-color: #c6e0f9;
+  }
+  .card-header {
+    color: #ffffff;
+    background-color: #022c3c;
+  }
+  
+  .list-group-item {
+    background-color: #d6dced;
+  }
