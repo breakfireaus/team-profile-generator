@@ -68,15 +68,15 @@ function addTeamMember() {
         .then(function ({ roleInfo, moreTeamMembers }) {
           let newMember
           if (role === 'Engineer') {
-            newMember = new Engineer(name, id, email, roleInfo)
+            newMember = new Engineer(name, id, employeeEmail, roleInfo)
           } else if (role === 'Intern') {
-            newMember = new Intern(Employeename, id, email, roleInfo)
+            newMember = new Intern(employeeName, id, employeeEmail, roleInfo)
           } else {
-            newMember = new Manager(Employeename, id, email, roleInfo)
+            newMember = new Manager(employeeName, id, employeeEmail, roleInfo)
           }
           employees.push(newMember)
           addHtmlforEmployee(newMember).then(function () {
-            if (moreTeamMembers === 'yes') {
+            if (moreTeamMembers === 'Yes') {
               addTeamMember()
             } else {
               finishHtmlFile()
