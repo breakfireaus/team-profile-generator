@@ -120,7 +120,7 @@ function addHtmlforEmployee(member) {
     const role = member.getRole()
     const id = member.getId()
     const email = member.getEmployeeEmail()
-    const officeNumber = member.officeNumber()
+    // const officePhoneNumber = member.getOfficeNumber()
     let data = ''
     if (role === 'Engineer') {
       const gitHub = member.getTheGithub()
@@ -147,7 +147,7 @@ function addHtmlforEmployee(member) {
                 </div>
               </div>`
     } else {
-      const officeNumber = member.officeNumber()
+      const officeNumber = member.getOfficeNumber()
       data = `<div class="col-4">
                 <div class="card mx-auto mb-3 shadow" style="width: 18rem">
                   <h5 class="card-header">${member.name}<br /><br /><i class="fas fa-mug-hot"></i> Manager</h5>
