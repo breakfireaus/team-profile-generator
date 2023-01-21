@@ -18,8 +18,8 @@ test('Can set ID from constructor', () => {
 })
 
 test('Can set email from constructor', () => {
-  const testEmployeeEmail = 'jared@fakemail.com'
-  const employee = new Employee('Jared', 1, testEmployeeEmail)
+  const testEmployeeEmail = 'matthew@email.com'
+  const employee = new Employee('matthew', 1, testEmployeeEmail)
   expect(employee.employeeEmail).toBe(testEmployeeEmail)
 })
 
