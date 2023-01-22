@@ -20,13 +20,13 @@ test('Can set ID from constructor', () => {
 test('Can set email from constructor', () => {
   const testEmployeeEmail = 'matthew@email.com'
   const employee = new Employee('matthew', 1, testEmployeeEmail)
-  expect(employee.employeeEmail).toBe(testEmployeeEmail)
+  expect(employee.email).toBe(testEmployeeEmail)
 })
 
 test('getEmployeeName() method', () => {
   const testNameValue = 'Matthew'
   const employee = new Employee(testNameValue)
-  expect(employee.getName()).toBe(testNameValue)
+  expect(employee.getEmployeeName()).toBe(testNameValue)
 })
 
 test('getId() method', () => {
@@ -38,7 +38,7 @@ test('getId() method', () => {
 test('getEmployeeEmail() method', () => {
   const testGrabEmail = 'Matthew@email.com'
   const employee = new Employee('Jared', 1, testGrabEmail)
-  expect(employee.getEmail()).toBe(testGrabEmail)
+  expect(employee.getEmployeeEmail()).toBe(testGrabEmail)
 })
 
 test('getRole() method', () => {
