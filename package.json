@@ -4,7 +4,7 @@
   "description": "A team profile generator for a tech company",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "jest",
     "start": "node index.js"
   },
   "author": "Breakfireaus",
