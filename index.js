@@ -129,7 +129,7 @@ function addHtmlforEmployee(member) {
                   <h5 class="card-header">${member.name}<br /><br /><i class="fas fa-glasses"></i> Engineer</h5>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">ID: ${id}</li>
-                      <li class="list-group-item">Email:<a href="mailto:${member.employeeEmail}" target="_blank"> ${member.EmployeeEmail}</a></li>
+                      <li class="list-group-item">Email:<a href="mailto:${member.email}" target="_blank"> ${member.email}</a></li>
                       <li class="list-group-item">GitHub:<a href="https://github.com/${gitHub}" target="_blank"> ${gitHub}</a></li>
                     </ul>
                 </div>
@@ -154,7 +154,7 @@ function addHtmlforEmployee(member) {
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item">ID: ${id}</li>
                       <li class="list-group-item">Email:<a href="mailto:${member.email}" target="_blank"> ${member.email}</a></li>
-                      <li class="list-group-item">Office Number: ${member.officeNumber}</li>
+                      <li class="list-group-item">Office Number: ${officeNumber}</li>
                     </ul>
                 </div>
               </div>`
